@@ -9,17 +9,6 @@ public class Gambling {
         while(money!=200&&money!=0){
             playCount++;
             System.out.println("Initial Money:"+money);
-            int bet = random.nextInt(2);
-            if(bet==1){
-                money = money+1;
-                wonCount++;
-            }else{
-                money = money-1;
-                System.out.println("Remaining Money Is :"+money);
-            }
         }
-        System.out.println("No of times Played:"+playCount);
-        System.out.println("No Of Times Won:"+wonCount);
-        System.out.println("No Of Times Lost:"+(playCount-wonCount));
     }
 }
