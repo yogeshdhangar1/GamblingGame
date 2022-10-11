@@ -5,15 +5,20 @@ public class Gambling {
         int money = 100;
         int playCount = 0;
         int wonCount = 0;
+        int totalCount=0;
         Random random = new Random();
         while(money!=200&&money!=0) {
             playCount++;
             System.out.println("Initial Money:" + money);
-            int bet = random.nextInt(1);
-            if (bet == 0.5) {
+            int bet = random.nextInt(2);
+            if (bet == 1) {
                 money = money + 1;
                 wonCount++;
             } else {
+                while(totalCount>=20){
+                    totalCount = playCount+wonCount;
+                    System.out.println("Total Count:"+totalCount);
+                }
                 money = money - 1;
                 System.out.println("Remaining Money Is :" + money);
                 System.out.println("No of Times Played:"+playCount);
