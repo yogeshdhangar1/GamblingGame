@@ -9,8 +9,8 @@ public class Gambling {
         while(money!=200&&money!=0) {
             playCount++;
             System.out.println("Initial Money:" + money);
-            int bet = random.nextInt(2);
-            if (bet == 1) {
+            int bet = random.nextInt(1);
+            if (bet == 0.5) {
                 money = money + 1;
                 wonCount++;
             } else {
